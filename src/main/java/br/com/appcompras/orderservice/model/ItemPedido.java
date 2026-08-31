@@ -2,15 +2,15 @@ package br.com.appcompras.orderservice.model;
 
 import br.com.appcompras.orderservice.enums.StatusItem;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@Builder
 @Entity
 @Table(name = "itens_pedido")
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ItemPedido {
 
     @Id
