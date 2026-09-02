@@ -58,4 +58,10 @@ public class PedidoController {
         PedidoResponse response = pedidoService.irParaOCaixa(idPedido);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/{idPedido}")
+    public ResponseEntity<PedidoResponse> buscarPorId(@PathVariable UUID idPedido) {
+        PedidoResponse response = pedidoService.buscarPorId(idPedido);
+        return ResponseEntity.ok(response);
+    }
 }

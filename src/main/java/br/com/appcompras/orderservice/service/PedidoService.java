@@ -108,4 +108,10 @@ public class PedidoService {
         return PedidioMapper.toResponse(pedidoRepository.save(pedido));
     }
 
+    public PedidoResponse buscarPorId(UUID idPedido) {
+        Pedido pedido = pedidoRepository.findById(idPedido)
+                .orElseThrow(() -> new RuntimeException("Pedido não encontrado!"));
+        return PedidioMapper.toResponse(pedido);
+    }
+
 }
